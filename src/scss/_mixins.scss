@@ -1,0 +1,13 @@
+@mixin custom-style-text($family, $style, $weight, $size) {
+  font-family: $family;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin custom-props-text($lineHeight, $letterSpacing, $textTransform, $color) {
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+  text-transform: $textTransform;
+  color: $color;
+}

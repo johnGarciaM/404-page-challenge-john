@@ -1,0 +1,94 @@
+@import "variables";
+@import "mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 95%;
+  height: 93%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem auto;
+}
+
+header {
+  span {
+    @include custom-style-text(
+      $font-family-inconsolata,
+      $font-style-normal,
+      $font-weight-bold,
+      $font-size-medium,
+    );
+    @include custom-props-text(25px, -0.08em, uppercase, $color-primary);
+  }
+}
+
+main {
+  display: inherit;
+  justify-content: inherit;
+  section {
+    margin-inline-end: 5rem;
+    article {
+      img {
+        width: 33.701rem;
+        height: 27.964rem;
+      }
+      h1 {
+        @include custom-style-text(
+          $font-family-space-mono,
+          $font-style-normal,
+          $font-weight-large,
+          $font-size-large,
+        );
+        @include custom-props-text(94.78px, -3.5%, lowercase, $color-primary);
+        &::first-letter{
+          text-transform: uppercase;
+        }
+      }
+      p{
+        width: 60%;
+        @include custom-style-text(
+          $font-family-space-mono,
+          $font-style-normal,
+          $font-weight-small,
+          $font-size-medium,
+        );
+        @include custom-props-text(35.54px, -3.5%, lowercase, $color-secondary);
+        &::first-letter{
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  h6 {
+    text-align: center;
+    @include custom-style-text(
+      $font-family-monserrat,
+      $font-style-normal,
+      $font-weight-medium,
+      $font-size-small,
+    );
+    @include custom-props-text(17.07px, -0.08em, lowercase, $color-ternary);
+    a {
+      text-decoration: none;
+      color: $color-ternary;
+      &:hover {
+        color: $color-quinary;
+      }
+    }
+  }
+}
