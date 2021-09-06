@@ -11,3 +11,7 @@
   text-transform: $textTransform;
   color: $color;
 }
+
+@mixin tablet-or-desktop {
+  @media (min-width: 600px) { @content }
+}

@@ -19,16 +19,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 2rem auto;
+  margin: 2rem auto 1rem auto;
 }
 
 header {
+  @include tablet-or-desktop{
+    span{
+      font-size: $font-size-medium-desktop !important;
+    }
+  }
   span {
     @include custom-style-text(
       $font-family-inconsolata,
       $font-style-normal,
       $font-weight-bold,
-      $font-size-medium,
+      $font-size-medium
     );
     @include custom-props-text(25px, -0.08em, uppercase, $color-primary);
   }
@@ -36,13 +41,45 @@ header {
 
 main {
   display: inherit;
-  justify-content: inherit;
-  section {
-    margin-inline-end: 5rem;
-    article {
-      img {
-        width: 33.701rem;
-        height: 27.964rem;
+  flex-direction: inherit;
+  // // Media query
+  @include tablet-or-desktop{
+    flex-direction: row;
+    section{
+      article{
+        img{
+          width: 90% !important;
+        }
+        h1{
+          font-size: $font-size-large-desktop !important;
+          line-height: 94.78px !important;
+        }
+        p{
+          width: 70% !important;
+          font-size: $font-size-medium-desktop !important;
+          line-height: 35.54px !important;
+        }
+        button {
+          width: 33% !important;
+          height: 7vh !important;
+          margin-block-start: 1rem;
+          background-color: $color-primary;
+          color: #FFFFFF;
+          @include custom-style-text(
+            $font-family-space-mono !important,
+            $font-style-normal !important,
+            $font-weight-large !important,
+            $font-size-small-desktop !important,
+          );
+          cursor: pointer;
+      }
+      }
+    }
+  }
+  section{
+    article{
+      img{
+        width: 100%;
       }
       h1 {
         @include custom-style-text(
@@ -51,29 +88,46 @@ main {
           $font-weight-large,
           $font-size-large,
         );
-        @include custom-props-text(94.78px, -3.5%, lowercase, $color-primary);
+        @include custom-props-text(42.39px, -3.5%, lowercase, $color-primary);
         &::first-letter{
           text-transform: uppercase;
         }
       }
-      p{
-        width: 60%;
+      p {
         @include custom-style-text(
           $font-family-space-mono,
           $font-style-normal,
           $font-weight-small,
           $font-size-medium,
         );
-        @include custom-props-text(35.54px, -3.5%, lowercase, $color-secondary);
+        @include custom-props-text(17.27px, -3.5%, lowercase, $color-secondary);
         &::first-letter{
           text-transform: uppercase;
         }
+      }
+      button {
+        width: 50%;
+        height: 5vh;
+        margin-block-start: 1rem;
+        background-color: $color-primary;
+        color: #FFFFFF;
+        @include custom-style-text(
+          $font-family-space-mono,
+          $font-style-normal,
+          $font-weight-large,
+          $font-size-small,
+        );
       }
     }
   }
 }
 
 footer {
+  @include tablet-or-desktop{
+    h6{
+      font-size: $font-size-small-desktop !important;
+    }
+  }
   h6 {
     text-align: center;
     @include custom-style-text(
