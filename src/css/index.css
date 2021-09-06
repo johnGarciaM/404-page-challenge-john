@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 95%;
+  height: 93%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem auto;
+}
+
+header span {
+  font-family: "Inconsolata", monospace;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: -0.08em;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+main {
+  display: inherit;
+  justify-content: inherit;
+}
+main section {
+  margin-inline-end: 5rem;
+}
+main section article img {
+  width: 33.701rem;
+  height: 27.964rem;
+}
+main section article h1 {
+  font-family: "Space Mono", monospace;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 94.78px;
+  letter-spacing: -3.5%;
+  text-transform: lowercase;
+  color: #333333;
+}
+main section article h1::first-letter {
+  text-transform: uppercase;
+}
+main section article p {
+  width: 60%;
+  font-family: "Space Mono", monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35.54px;
+  letter-spacing: -3.5%;
+  text-transform: lowercase;
+  color: #4F4F4F;
+}
+main section article p::first-letter {
+  text-transform: uppercase;
+}
+
+footer h6 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17.07px;
+  letter-spacing: -0.08em;
+  text-transform: lowercase;
+  color: #BDBDBD;
+}
+footer h6 a {
+  text-decoration: none;
+  color: #BDBDBD;
+}
+footer h6 a:hover {
+  color: #60588E;
+}
+
+/*# sourceMappingURL=index.css.map */
