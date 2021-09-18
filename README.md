@@ -1,4 +1,4 @@
-# 404-page-challenge-john
+# 404-page-challenge
 
 ## Dev challenges
 
